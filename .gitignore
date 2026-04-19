@@ -1,1 +1,4 @@
 depense_tracert/public/favicon.svg
+depense-tracert/.gitignore
+depense-tracert/.env
+.vscode
