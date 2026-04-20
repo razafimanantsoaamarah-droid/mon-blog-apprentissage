@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: backend
+        working-directory: backend/expense-tracker
     
     steps:
       - uses: actions/checkout@v4
@@ -24,10 +24,10 @@ jobs:
           cache: 'maven'
 
       - name: Grant execute permission for mvnw
-        run: chmod +x expense-tracker/mvnw
+        run: chmod +x mvnw
 
       - name: Build with Maven
-        run: ./expense-tracker/mvnw clean package -DskipTests
+        run: ./mvnw clean package -DskipTests
 
   frontend-build:
     runs-on: ubuntu-latest
